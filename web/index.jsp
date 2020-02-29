@@ -17,7 +17,7 @@
         <%!
             public class User {
 
-                String URL = "jdbc:mysql://localhost:3306/traindatabase";
+                String URL = "jdbc:mysql://localhost:3306/<Put Here The Name Of Your Database>";
                 String USERNAME = "root";
                 String PASSWORD = "";
 
@@ -30,7 +30,7 @@
                         con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 
                         insertUsers = con.prepareStatement(
-                                "INSERT INTO user(u_fname,u_lname,u_username,u_password,u_telephone,u_email)"
+                                "INSERT INTO <Put here the name of your database table>(u_fname,u_lname,u_username,u_password,u_telephone,u_email)"
                                 + "VALUES (?,?,?,?,?,?) ");
 
                     } catch (SQLException e) {
